@@ -1,26 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>SGL - game simulation</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
 
-<head>
-  <title>SGL - game simulation</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <style>
+      body {
+        background-color: #cce0ff;
+        color: #000;
+      }
 
-  <style>
-    body {
-      background-color: #cce0ff;
-      color: #000;
-    }
+      a {
+        color: #080;
+      }
+    </style>
+  </head>
 
-    a {
-      color: #080;
-    }
-  </style>
-</head>
+  <body>
+    <script type="module">
+      const http = require("http");
+      const host = "localhost";
+      const port = 8000;
 
-<body>
-  <script type="module">
-    import * as THREE from "/build/three.module.js";
+      const requestListener = function (req, res) {
+        res.writeHead(200);
+        res.end("My first server!");
+      };
+
+      const server = http.createServer(requestListener);
+      server.listen(port, host, () => {
+        console.log(`Server is running on http://${host}:${port}`);
+      });
+      import * as THREE from "/build/three.module.js";
 
       import Stats from "/examples/jsm/libs/stats.module.js";
       import { GUI } from "/examples/jsm/libs/dat.gui.module.js";
@@ -578,6 +593,5 @@
         renderer.render(scene, camera);
       }
     </script>
-</body>
-
+  </body>
 </html>
