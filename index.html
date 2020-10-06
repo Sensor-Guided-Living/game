@@ -35,7 +35,8 @@
       server.listen(port, host, () => {
         console.log(`Server is running on http://${host}:${port}`);
       });
-      import * as THREE from "/build/three.module.js";
+
+      import * as THREE from "./build/three.module.js";
 
       import Stats from "/examples/jsm/libs/stats.module.js";
       import { GUI } from "/examples/jsm/libs/dat.gui.module.js";
