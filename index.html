@@ -592,8 +592,15 @@
       border: 5px solid rgb(25, 0, 255);
       border-radius: 20px;
       text-align: center;
-      margin-top: 80px;
-      margin-left: auto;
+      margin: auto;
+      background-image: url("/aus.png");
+      background-position: center;
+
+      border: 3px solid green;
+      padding: 10px;
+
+      height: auto;
+      text-align: justify;
 
 
 
@@ -656,7 +663,7 @@
       maxPredictions = model.getTotalClasses();
 
       /* CAMARA SIZE WOLFKING */
-      const size = 90;
+      const size = 100;
       const flip = true;
       webcam = new tmPose.Webcam(size, size, flip);
       await webcam.setup();
