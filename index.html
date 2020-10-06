@@ -21,33 +21,29 @@
   </head>
 
   <body>
-    <div id="info">
-      Example to gramification<br />
-      test <br />
-    </div>
-    <script>
-      const http = require("http");
-      const host = "localhost";
-      const port = 8000;
 
-      const requestListener = function (req, res) {
-        res.writeHead(200);
-        res.end("My first server!");
-      };
-
-      const server = http.createServer(requestListener);
-      server.listen(port, host, () => {
-        console.log(`Server is running on http://${host}:${port}`);
-      });
     </script>
 
     <script type="module">
-      import * as THREE from "./build/three.module.js";
+		const http = require("http");
+const host = 'localhost';
+const port = 8000;
 
-      import Stats from "./examples/jsm/libs/stats.module.js";
-      import { GUI } from "./examples/jsm/libs/dat.gui.module.js";
+const requestListener = function (req, res) {
+    res.writeHead(200);
+    res.end("My first server!");
+};
 
-      import { OrbitControls } from "./examples/jsm/controls/OrbitControls.js";
+const server = http.createServer(requestListener);
+server.listen(port, host, () => {
+    console.log(`Server is running on http://${host}:${port}`);
+});
+      import * as THREE from "/build/three.module.js";
+
+      import Stats from "/examples/jsm/libs/stats.module.js";
+      import { GUI } from "/examples/jsm/libs/dat.gui.module.js";
+
+      import { OrbitControls } from "/examples/jsm/controls/OrbitControls.js";
 
       /*
        * Cloth Simulation using a relaxed constraints solver
