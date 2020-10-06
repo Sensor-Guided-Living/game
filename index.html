@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>SGL - game simulation</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
-    />
 
-    <style>
-      body {
-        background-color: #cce0ff;
-        color: #000;
-      }
+<head>
+  <title>SGL - game simulation</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-      a {
-        color: #080;
-      }
-    </style>
-  </head>
+  <style>
+    body {
+      background-color: #cce0ff;
+      color: #000;
+    }
 
-  <body>
-    <script type="text/javascript"></script>
-    <script type="module">
-      import * as THREE from "./build/three.module.js";
+    a {
+      color: #080;
+    }
+  </style>
+</head>
+
+<body>
+  <script type="text/javascript"></script>
+  <script type="module">
+    import * as THREE from "./build/three.module.js";
 
       import Stats from "./examples/jsm/libs/stats.module.js";
       import { GUI } from "./examples/jsm/libs/dat.gui.module.js";
@@ -397,7 +395,7 @@
         // cloth material
 
         var loader = new THREE.TextureLoader();
-        var clothTexture = loader.load("textures/patterns/circuit_pattern.png");
+        var clothTexture = loader.load("/logo.jpg");
         clothTexture.anisotropy = 16;
 
         var clothMaterial = new THREE.MeshLambertMaterial({
@@ -581,5 +579,6 @@
         renderer.render(scene, camera);
       }
     </script>
-  </body>
+</body>
+
 </html>
