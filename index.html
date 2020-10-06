@@ -22,18 +22,30 @@
 
   <body>
     <script>
-      const http = require("http");
-      const host = "localhost";
-      const port = 8000;
+      var express = require("express");
+      var bodyParser = require("body-parser");
 
-      const requestListener = function (req, res) {
-        res.writeHead(200);
-        res.end("My first server!");
-      };
+      var app = express();
+      var port = process.env.PORT || 3525;
 
-      const server = http.createServer(requestListener);
-      server.listen(port, host, () => {
-        console.log(`Server is running on http://${host}:${port}`);
+      // Convierte una petición recibida (POST-GET...) a objeto JSON
+      app.use(
+        bodyParser.urlencoded({
+          extended: false,
+        })
+      );
+      app.use(bodyParser.json());
+
+      app.get("/", function (req, res) {
+        res.status(200).send({
+          message: "GET Home route working fine!",
+        });
+      });
+
+      app.listen(port, function () {
+        console.log(`Server running in http://localhost:${port}`);
+        console.log("Defined routes:");
+        console.log("	[GET] http://localhost:3525/");
       });
     </script>
 
