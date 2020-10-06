@@ -1,45 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>SGL - game simulation</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
-    />
 
-    <style>
-      body {
-        background-color: #cce0ff;
-        color: #000;
-      }
+<head>
+  <title>SGL - game simulation</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-      a {
-        color: #080;
-      }
-    </style>
-  </head>
+  <style>
+    body {
+      background-color: #cce0ff;
+      color: #000;
+    }
 
-  <body>
-    <script type="module">
-      import * as THREE from "/build/three.module.js";
+    a {
+      color: #080;
+    }
+  </style>
+</head>
+
+<body>
+  <script type="module">
+    import * as THREE from "/build/three.module.js";
 
       import Stats from "/examples/jsm/libs/stats.module.js";
       import { GUI } from "/examples/jsm/libs/dat.gui.module.js";
 
       import { OrbitControls } from "/examples/jsm/controls/OrbitControls.js";
-
-      /*
-       * Cloth Simulation using a relaxed constraints solver
-       */
-
-      // Suggested Readings
-
-      // Advanced Character Physics by Thomas Jakobsen Character
-      // http://freespace.virgin.net/hugo.elias/models/m_cloth.htm
-      // http://en.wikipedia.org/wiki/Cloth_modeling
-      // http://cg.alexandra.dk/tag/spring-mass-system/
-      // Real-time Cloth Animation http://www.darwin3d.com/gamedev/articles/col0599.pdf
 
       var params = {
         enableWind: true,
@@ -592,5 +578,6 @@
         renderer.render(scene, camera);
       }
     </script>
-  </body>
+</body>
+
 </html>
