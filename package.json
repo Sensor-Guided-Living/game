@@ -137,6 +137,7 @@
     "posix-character-classes": "^0.1.1",
     "process-nextick-args": "^2.0.1",
     "ps-tree": "^1.2.0",
+    "react-h5-audio-player": "^3.4.1",
     "readable-stream": "^2.3.7",
     "readdirp": "^2.2.1",
     "regex-not": "^1.0.2",
